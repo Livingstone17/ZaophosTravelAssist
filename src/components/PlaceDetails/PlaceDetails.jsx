@@ -9,7 +9,7 @@ import useStyles from './styles'
 function PlaceDetails({place,selected,refProp}) {
     const classes = useStyles();
     console.log(place);
-    if (selected) refProp?.current?.scrollintoView({behavior:'smooth', block:'start'})
+    if (selected) refProp?.current?.scrollIntoView({behavior:'smooth', block:'start'})
   return (
     // <div>
     //     <h1>{place.name}</h1>
