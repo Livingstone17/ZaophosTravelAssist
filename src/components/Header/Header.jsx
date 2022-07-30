@@ -19,7 +19,7 @@ function Header({setCoordinates}) {
         setCoordinates({lat,lng});
     }
   return (
-   <AppBar position='static'>
+   <AppBar position='static' color='secondary'>
         <Toolbar className={classes.toolbar}>
             <Typography variant='h5' className={classes.title}>
                 ZTravelAssist

@@ -6,6 +6,7 @@ import Map from './components/Map/Map'
 import {CssBaseline, Grid} from '@material-ui/core'
 import { getPlacesData } from './api/api'
 import ErrorBoundary from './components/ErrorBoundary'
+// import '../public/app.css';
 
 function App() {
 
