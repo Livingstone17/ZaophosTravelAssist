@@ -9,6 +9,9 @@ function Map({setCoordinates,setBounds,coordinates,places,setChildClicked}) {
     const classes = useStyles();
     const isDesktop =  useMediaQuery('(min-width:600px)')
 
+   const onMapChildClick = (child)=> {
+    setChildClicked(child)
+    }
 
   return (
     <div className={classes.mapContainer}>
@@ -24,9 +27,11 @@ function Map({setCoordinates,setBounds,coordinates,places,setChildClicked}) {
                 setCoordinates({lat:e.center.lat, lng:e.center.lng});
                 setBounds({ne:e.marginBounds.ne, sw:e.marginBounds.sw});
             }}
-            onChildClick={(child)=>{
-                setChildClicked(child)
-            }}>
+            // onChildClick={(child)=>{
+            //     setChildClicked(child)
+            // }}
+            onChildClick={onMapChildClick}
+            >
                 {places?.map((place,i)=>(
                     <div className={classes.markerContainer}
                     lat={place.latitude}
